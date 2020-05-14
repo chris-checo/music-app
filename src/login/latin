@@ -1,0 +1,107 @@
+import React, { Component } from "react";
+
+
+import {Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Alert, KeyboardAvoidingView, Expo,Platform, StyleSheet, Button, Image, TouchableHighlight} from 'react-native';
+
+
+class Latin extends React.Component {
+
+
+  render() {
+     
+    return (
+     
+<View style={styles.container}>
+ <View style={styles.contentContainer}>
+ <Text style={styles.title}>
+        Today's Latin Music
+        </Text>
+</View>
+
+<View style={styles.spacebar}>
+<Text style={styles.about}>
+About
+</Text>
+</View>
+
+<View style={styles.textContainer}>
+<Text style={styles.info}>
+Latin Pop and Reggaeton has been interesting this year, with the release of many hit singles from artists like J Balvin, and a hit album from the eclectic Bad Bunny. His album, YHLQMDLG, reached number 1 on the billboard hot 100 list in its first week. Other artists are expected to release new and anticipated music this year, including Romeo Santos, Anuel Aa, and 6ix9ine.
+</Text>
+</View>
+
+<View style={styles.contentContainer}>
+  <Text style={styles.artists}>
+  Top Artists in 2020: Bad Bunny, Anuel Aa, J Balvin, Natti Natasha, Ozuna, and more. 
+  </Text>
+</View>
+
+<View style={styles.textContainer}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Pop')}
+            >
+           <View style={styles.touchableButton1}>
+                        <Text style={styles.buttonText}>
+                          Next
+                        </Text>
+                    </View>
+                </TouchableHighlight>               
+            </View>
+</View>     
+    );
+  }
+}
+const styles = StyleSheet.create({
+container:{
+  flex: 1,
+    backgroundColor: '#ffeb85',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title:{
+    fontSize: 35,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+     color:'black',
+  },
+  about:{
+    fontSize: 25,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+  },
+  info:{
+fontSize: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+     margin: 1,
+  },
+ touchableButton1: {
+        backgroundColor: '#ff8585',
+        height: 40,
+        width: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+         borderRadius: 10,
+   
+   
+    },
+   
+    buttonText: {      
+        fontSize: 14,
+        fontWeight:'bold',
+    }
+
+});
+
+
+export default Latin;
+
+        
+
