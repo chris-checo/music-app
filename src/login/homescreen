@@ -1,0 +1,113 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  Keyboard,
+  View,
+  TextInput,
+  TouchableWithoutFeedback,
+  Alert,
+  KeyboardAvoidingView,
+  Button,
+  Image,
+  TouchableHighlight,
+  ImageBackground,Platform,Animated
+} from 'react-native';
+
+
+
+class Homescreen extends React.Component {
+
+  
+
+  render() {
+    return (
+
+
+      <View style={styles.container}>
+
+      <Image 
+source={{uri: 'https://ci4.googleusercontent.com/proxy/rXXhobHWMLV5yqfE4qRj8jz5wqg9GluPCCeuSRyPPLkCp7GbjyIlr2nI1jWM2-iI02CzaaYMgbFu3mDEuxKBXh6uxe8pt85r6bLz36HfQuKg2HznSyf0eERNsoQ17o4eM9ix_OL4fSRVzx1BOE__RLOC9Ho94vwd=s0-d-e1-ft#https://www.freelogodesign.org/file/app/client/thumb/7853918a-5a1e-449f-b324-f9f739a644d5_200x200.png'}}
+style={{height: 200, width: 200, marginTop: 15, margin: 5,}}/>
+
+       
+       
+        <Text style={styles.info}>
+      Learn More About the Music You Listen to and Find New Music That You Might Like
+        </Text>
+
+<View style={styles.textContainer}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Hiphop')}
+            >
+           <View style={styles.touchableButton1}>
+                        <Text style={styles.buttonText}>
+                          ENTER
+                        </Text>
+                    </View>
+                </TouchableHighlight>
+                
+            </View>
+
+ 
+
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'lightgrey',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+
+  },
+
+  textContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+
+  title: {
+    fontSize: 35,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+     color:'black',
+    
+  },
+  info:{
+    fontSize: 20,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    textAlign:'center',
+    alignItems: 'center',
+     color:'blue',
+  },
+
+   touchableButton1: {
+        backgroundColor: '#ff8585',
+        height: 40,
+        width: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+         borderRadius: 10,
+   
+   
+    },
+   
+    buttonText: {
+     
+        
+        fontSize: 14,
+        fontWeight:'bold',
+    }
+});
+
+
+export default Homescreen;
