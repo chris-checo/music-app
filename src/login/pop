@@ -1,0 +1,107 @@
+import React, { Component } from "react";
+
+
+import {Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Alert, KeyboardAvoidingView, Expo,Platform, StyleSheet, Button, Image, TouchableHighlight} from 'react-native';
+
+
+class Pop extends React.Component {
+
+
+  render() {
+     
+    return (
+     
+<View style={styles.container}>
+ <View style={styles.contentContainer}>
+ <Text style={styles.title}>
+        Today's Pop Music
+        </Text>
+</View>
+
+<View style={styles.spacebar}>
+<Text style={styles.about}>
+About
+</Text>
+</View>
+
+<View style={styles.textContainer}>
+<Text style={styles.info}>
+This year has been a promising one for pop music 'stans', as artists like Justin Bieber, Selena Gomez, and The Weeknd have led this category with great albums they've released to top off the pop music charts in 2020. The Weeknd has been extremely successful as 'Blinding Lights' has been in the top 10 list for several consecutive weeks on Apple Music. 
+</Text>
+</View>
+
+<View style={styles.contentContainer}>
+  <Text style={styles.artists}>
+  Top Artists in 2020: The Weeknd, Justin Bieber, Ariana Grande, Selena Gomez, Doja Cat, Dua Lipa, and more. 
+  </Text>
+</View>
+
+<View style={styles.textContainer}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Rhythm')}
+            >
+           <View style={styles.touchableButton1}>
+                        <Text style={styles.buttonText}>
+                          Next
+                        </Text>
+                    </View>
+                </TouchableHighlight>               
+            </View>
+</View>     
+    );
+  }
+}
+const styles = StyleSheet.create({
+container:{
+  flex: 1,
+    backgroundColor: '#ffeb85',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title:{
+    fontSize: 35,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+     color:'black',
+  },
+  about:{
+    fontSize: 25,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+  },
+  info:{
+fontSize: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+     margin: 1,
+  },
+ touchableButton1: {
+        backgroundColor: '#ff8585',
+        height: 40,
+        width: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+         borderRadius: 10,
+   
+   
+    },
+   
+    buttonText: {      
+        fontSize: 14,
+        fontWeight:'bold',
+    }
+
+});
+
+
+export default Pop;
+
+        
+
