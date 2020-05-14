@@ -1,0 +1,105 @@
+     
+import React, { Component } from "react";
+
+
+import {Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Alert, KeyboardAvoidingView, Expo,Platform, StyleSheet, Button, Image, TouchableHighlight} from 'react-native';
+
+
+class Hiphop extends React.Component {
+
+
+  render() {
+     
+    return (
+     
+<View style={styles.container}>
+ <View style={styles.contentContainer}>
+ <Text style={styles.title}>
+        Today's Hip Hop 
+        </Text>
+</View>
+
+<View style={styles.spacebar}>
+<Text style={styles.about}>
+About
+</Text>
+</View>
+
+<View style={styles.textContainer}>
+<Text style={styles.info}>
+2020 has been a rewarding year for hip hop fans, with the return of several old faces, and new content from up and coming artists. The release of albums like Funeral and Music to Be Murdered By from Lil Wayne and Eminem were great to see in the early months of 2020. While these were great, many younger artists released content this year that has kept hip hop fans with great songs to listen to during the challenging period of global lockdown due to COVID-19. 
+</Text>
+</View>
+
+<View style={styles.contentContainer}>
+  <Text style={styles.artists}>
+  Top Artists in 2020: DaBaby, Drake, Megan Thee Stallion, Lil Baby, Lil Uzi Vert, and more.
+  </Text>
+</View>
+
+<View style={styles.textContainer}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Latin')}
+            >
+           <View style={styles.touchableButton1}>
+                        <Text style={styles.buttonText}>
+                          Next
+                        </Text>
+                    </View>
+                </TouchableHighlight>               
+            </View>
+</View>     
+    );
+  }
+}
+const styles = StyleSheet.create({
+container:{
+  flex: 1,
+    backgroundColor: '#ffeb85',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title:{
+    fontSize: 35,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+     color:'black',
+  },
+  about:{
+    fontSize: 25,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+  },
+  info:{
+fontSize: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+     margin: 1,
+  },
+ touchableButton1: {
+        backgroundColor: '#ff8585',
+        height: 40,
+        width: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+         borderRadius: 10,
+   
+   
+    },
+   
+    buttonText: {      
+        fontSize: 14,
+        fontWeight:'bold',
+    }
+
+});
+
+
+export default Hiphop;
