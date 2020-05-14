@@ -1,0 +1,107 @@
+import React, { Component } from "react";
+
+
+import {Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Alert, KeyboardAvoidingView, Expo,Platform, StyleSheet, Button, Image, TouchableHighlight} from 'react-native';
+
+
+class Rhythm extends React.Component {
+
+
+  render() {
+     
+    return (
+     
+<View style={styles.container}>
+ <View style={styles.contentContainer}>
+ <Text style={styles.title}>
+        Today's R&B Music
+        </Text>
+</View>
+
+<View style={styles.spacebar}>
+<Text style={styles.about}>
+About
+</Text>
+</View>
+
+<View style={styles.textContainer}>
+<Text style={styles.info}>
+Numerous artists have put in tremendous work during 2019 and 2020 to put out some great R&B projects, such as PARTYNEXTDOOR and Kehlani, who released Partymobile in March 2020 and It Was Good Until It Wasn't in May. Other artists like Summer Walker and Jhene Aiko were rewarded with great succes for albums like Over It in  October 2019 and Chilombo in March 2020. Artists like Khalid, 6LACk, and Brent Faiyaz are among the fresh new faces we are expected to hear more great music from in 2020. 
+</Text>
+</View>
+
+<View style={styles.contentContainer}>
+  <Text style={styles.artists}>
+  Top Artists in 2020: Kehlani, Summer Walker, Jhene Aiko, Tory Lanez, Rihanna, PARTYNEXTDOOR, Chris Brown, and more. 
+  </Text>
+</View>
+
+<View style={styles.textContainer}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Homescreen')}
+            >
+           <View style={styles.touchableButton1}>
+                        <Text style={styles.buttonText}>
+                          Home 
+                        </Text>
+                    </View>
+                </TouchableHighlight>               
+            </View>
+</View>     
+    );
+  }
+}
+const styles = StyleSheet.create({
+container:{
+  flex: 1,
+    backgroundColor: '#ffeb85',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title:{
+    fontSize: 35,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+     color:'black',
+  },
+  about:{
+    fontSize: 25,
+    fontWeight:'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+  },
+  info:{
+fontSize: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'left',
+     color:'black',
+     margin: 1,
+  },
+ touchableButton1: {
+        backgroundColor: '#ff8585',
+        height: 40,
+        width: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+         borderRadius: 10,
+   
+   
+    },
+   
+    buttonText: {      
+        fontSize: 14,
+        fontWeight:'bold',
+    }
+
+});
+
+
+export default Rhythm;
+
+        
+
